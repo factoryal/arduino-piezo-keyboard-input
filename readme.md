@@ -3,7 +3,8 @@
 
 # Application
 [![유튜브 링크](https://img.youtube.com/vi/SaSMSTCZxYg/0.jpg)](https://youtu.be/SaSMSTCZxYg) 
-박수로 물불춤하기
+<br>박수로 물불춤하기
+Play A Dance of Fire and Ice with clapping control
 
 # Compatible Arduino Boards
 USB CDC를 사용할 수 있는 아두이노를 사용하세요.
