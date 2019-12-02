@@ -21,12 +21,12 @@
 // Threshold
 // If read value lower than THRESHOLD, ignore it.
 // Higher value, lower sensitivity.
-#define THRESHOLD 1
+#define THRESHOLD 4
 
 // Cool Time
 // If over threshold value read time less than COOL_TIME(ms) passed last read time, ignore it.
-// Assume that human can input 50 inputs per second. 1000 / 50 = 20 (quite fast enough)
-#define COOL_TIME 20
+// Assume that human can input 20 inputs per second. 1000 / 20 = 50 (quite fast enough)
+#define COOL_TIME 50
 
 
 
@@ -36,6 +36,7 @@ void setup() {
   // put your setup code here, to run once:
   Keyboard.begin();
   analogReference(INTERNAL);
+  Serial.begin(115200);
 }
 
 void loop() {
@@ -48,6 +49,7 @@ void loop() {
       Keyboard.press(Key1);
       delay(1);
       Keyboard.release(Key1);
+      Serial.println(r);
       oldTime = nowTime;
     }
   }
